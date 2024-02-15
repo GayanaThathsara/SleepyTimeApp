@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sleepy Time</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <h1 class="title">Sleepy Time</h1>
+        <div class="input-container">
+            <label for="time-input" class="label">What time do you want to sleep ?</label>
+            <input type="time" id="time-input" class="input">
+            <button id="calculate-btn" class="btn btn-light-blue">Calculate</button>
+        <div id="times-container"></div>
+        </div>
+        <div class="note-box">
+            <p class="note">If you head to bed right now, you should try to wake up at one of the following times</p>
+            <p class="note">Please keep in mind that you should be falling asleep at these times. The average human takes 15 minutes to fall asleep, so plan accordingly!</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
