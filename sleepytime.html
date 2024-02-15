@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SleepyTime</title>
+	<style>
+		body {
+			background-color: #1a1a1a;
+			color: #f2f2f2;
+			font-family: Arial, Helvetica, sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 0;
+		}
+
+		.box {
+			background-color: #333333;
+			color: #f2f2f2;
+			margin: 10px;
+			padding: 10px;
+			border-radius: 5px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+
+		.one-cycle {
+			background-color: #90ee90;
+		}
+
+		.two-cycles {
+			background-color: #add8e6;
+		}
+
+		.three-cycles {
+			background-color: #87cefa;
+		}
+
+		.four-cycles {
+			background-color: #ffb6c1;
+		}
+
+		.five-cycles {
+			background-color: #ff69b4;
+		}
+
+		.six-cycles {
+			background-color: #c71585;
+		}
+
+		button {
+			background-color: #4CAF50;
+			color: #f2f2f2;
+			border: none;
+			border-radius: 5px;
+			padding: 10px;
+			margin: 10px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>SleepyTime</h1>
+	<div class="box one-cycle">
+		<p><strong>One Cycle</strong></p>
+		<p class="wake-up-time"></p>
+		<p>90 minutes of sleep</p>
+	</div>
+	<div class="box two-cycles">
+		<p><strong>Two Cycles</strong></p>
+		<p class="wake-up-time"></p>
+		<p>3 hours of sleep</p>
+	</div>
+	<div class="box three-cycles">
+		<p><strong>Three Cycles</strong></p>
+		<p class="wake-up-time"></p>
+		<p>4.5 hours of sleep</p>
+	</div>
+	<div class="box four-cycles">
+		<p><strong>Four Cycles</strong></p>
+		<p class="wake-up-time"></p>
+		<p>6 hours of sleep</p>
+	</div>
+	<div class="box five-cycles">
+		<p><strong>Five Cycles</strong></p>
+		<p class="wake-up-time"></p>
+		<p>7.5 hours of sleep</p>
+	</div>
+	<div class="box six-cycles">
+		<p><strong>Six Cycles</strong></p>
+		<p class="wake-up-time"></p>
+		<p>9 hours of sleep</p>
+	</div>
+	<button onclick="calculateNow()">Calculate Now</button>
+
+	<script>
+		function calculateNow() {
+			fetch('/sleepytime
+
+        <script>
+	        function calculateNow() {
+			fetch('/sleepytime')
+				.then(response => response.text())
+				.then(text => {
+					let times = JSON.parse(text);
+					let output = '';
+					for (let i = 0; i < times.length; i++) {
+						output += `<div class="box">
+							<p>For ${times[i][1]} (${times[i][0]} Hours of Sleep)</p>
+							<p>${times[i][2]}</p>
+						</div>`;
+					}
+					document.getElementById('times').innerHTML = output;
+				});
+		}
+	</script>
+	</body>
+</html>
